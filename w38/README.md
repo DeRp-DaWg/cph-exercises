@@ -62,5 +62,5 @@ Either method is fine - it is up to you.
 - 5.b Create a function in Datamatik that takes in the array from 5.a as a parameter as well as an integer. The function should return the field "name" (the name of the student) and print it (the integer should be used as the index nuber of the student to be printed). Call this method with different parameters (only the integer - not the array) from the main() of Datamatik.
 - 5.c Create a similar function to that of 5.b, but instead of receiving the array and an integer, it receives the array and a string. Loop through all elements in the array until you find the element with the name received as a parameter. Then return the index of that student. Call this method with different names from the main method of Datamatik
 
-## Task 6 /*
+## Task 6
 Start en ny java fil med din tekst editor og sæt koden fra 'debug' ind i filen. Gem filen med det rigtige navn og compile klassen - du vil se at der er 7 fejl. Fix dem.
