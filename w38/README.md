@@ -1,15 +1,3 @@
-# cph-1st-w38
-Exercises for week 38
-
-Alle opgaverne kan løses ud fra den viden I har tilegnet jer fra bogen og skal løses med en tekst editor og compiles med en kommando prompt/Terminal.
-I enkelte tilfælde er der behov for viden vi endnu ikke har været igennem - i disse tilfælde, vil der være et hint i opgaveformuleringen. I vil også kunne hente hjælp i kapitel 11 ThinkJava.
-
-Såfremt I sidder fast ved en opgave, så tag en kort pause og prøv igen. Hvis I stadig sidder fast ved den, så hop videre til den næste.
-Generelt er det bedre at I får tænkt over alle opgaverne, end at I får løst dem allesammen fuldkommen. 
-Endvidere er I meget velkommen til at tale sammen om opgaverne, men det forventes at I alle koder hver jeres løsning. 
-
-Opgaverne skal ligesom sidste uge, afleveres på moodle, via et link til jeres github repo. 
-
 ## Task 1 - Functions
 - 1.a Create a file and name it Main.java, include a main method.
 - 1.b Write a function that prints an empty line and call it from main();
