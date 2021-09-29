@@ -69,6 +69,7 @@ public class Main
 
     //skriv dine metoder herunder:
     private static void printLongestWord() {
+        System.out.print("The longest word: ");
         String longest = "";
         for (String s : text) {
             if (s.length() > longest.length()) {
@@ -79,12 +80,14 @@ public class Main
     }
 
     private static void printFirstHalfOfEachWord() {
+        System.out.println("First half of each word: ");
         for (String s : text) {
             System.out.println(s.substring(0,s.length()/2));
         }
     }
 
     private static void printMostFrequentLetter() {
+        System.out.println("10 letters that occur the most: ");
         ArrayList<Character> charArray = new ArrayList<Character>();
         HashMap<Character, Integer> occurrences = new HashMap<Character, Integer>();
         char[] letters = "abcdefghijklmnopqrstuvwxyzæøå".toCharArray();
@@ -111,6 +114,7 @@ public class Main
         }
     }
     private static void printLessFrequentLetter() {
+        System.out.println("10 letters that occur the least: ");
         ArrayList<Character> charArray = new ArrayList<Character>();
         HashMap<Character, Integer> occurrences = new HashMap<Character, Integer>();
         char[] letters = "abcdefghijklmnopqrstuvwxyzæøå".toCharArray();
