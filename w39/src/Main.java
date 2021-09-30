@@ -32,6 +32,7 @@ public class Main
         printFirstHalfOfEachWord();
         printMostFrequentLetter();
         printLessFrequentLetter();
+        //printLetterOccurrences();                               // Method to print all letter occurrences in alphabetical order.
 
     }
 
@@ -88,26 +89,8 @@ public class Main
 
     private static void printMostFrequentLetter() {
         System.out.println("10 letters that occur the most: ");
-        ArrayList<Character> charArray = new ArrayList<Character>();
-        HashMap<Character, Integer> occurrences = new HashMap<Character, Integer>();
-        char[] letters = "abcdefghijklmnopqrstuvwxyzæøå".toCharArray();
-        for (char c : letters) {
-            occurrences.put(c, 1);
-        }
-        for (String s : text) {
-            for (char c : s.toCharArray()) {
-                if (occurrences.containsKey(c)) {
-                    occurrences.put(c, occurrences.get(c)+1);
-                }
-            }
-        }
-        Object[] a = occurrences.entrySet().toArray();
-        Arrays.sort(a, new Comparator() {
-            public int compare(Object o1, Object o2) {
-                return ((Map.Entry<String, Integer>) o2).getValue()
-                        .compareTo(((Map.Entry<String, Integer>) o1).getValue());
-            }
-        });
+        Object[] a = letterOccurrences();
+        sortLettersOccurrences(a);
         for (int i = 0; i < 10; i++) {
             System.out.println(((Map.Entry<Character, Integer>) a[i]).getKey() + " : "
                     + ((Map.Entry<Character, Integer>) a[i]).getValue());
@@ -115,29 +98,44 @@ public class Main
     }
     private static void printLessFrequentLetter() {
         System.out.println("10 letters that occur the least: ");
-        ArrayList<Character> charArray = new ArrayList<Character>();
-        HashMap<Character, Integer> occurrences = new HashMap<Character, Integer>();
+        Object[] a = letterOccurrences();
+        sortLettersOccurrences(a);
+        for (int i = a.length-1; i > a.length-11; i--) {
+            System.out.println(((Map.Entry<Character, Integer>) a[i]).getKey() + " : "
+                    + ((Map.Entry<Character, Integer>) a[i]).getValue());
+        }
+    }
+    private static Object[] letterOccurrences() {
+        LinkedHashMap<Character, Integer> occurrences = new LinkedHashMap<Character, Integer>();
         char[] letters = "abcdefghijklmnopqrstuvwxyzæøå".toCharArray();
         for (char c : letters) {
-            occurrences.put(c, 1);
+            occurrences.put(c, 0);
         }
         for (String s : text) {
             for (char c : s.toCharArray()) {
+                c = Character.toLowerCase(c);
                 if (occurrences.containsKey(c)) {
                     occurrences.put(c, occurrences.get(c)+1);
                 }
             }
         }
         Object[] a = occurrences.entrySet().toArray();
+        return a;
+    }
+    private static void sortLettersOccurrences(Object[] a) {
         Arrays.sort(a, new Comparator() {
             public int compare(Object o1, Object o2) {
                 return ((Map.Entry<String, Integer>) o2).getValue()
                         .compareTo(((Map.Entry<String, Integer>) o1).getValue());
             }
         });
-        for (int i = a.length-1; i > a.length-11; i--) {
-            System.out.println(((Map.Entry<Character, Integer>) a[i]).getKey() + " : "
-                    + ((Map.Entry<Character, Integer>) a[i]).getValue());
+    }
+    private static void printLetterOccurrences() {
+        System.out.println("All letter occurrences in alphabetical order: ");
+        Object[] a = letterOccurrences();
+        for (Object o : a) {
+            System.out.println(((Map.Entry<Character, Integer>) o).getKey() + " : "
+                    + ((Map.Entry<Character, Integer>) o).getValue());
         }
     }
 }
