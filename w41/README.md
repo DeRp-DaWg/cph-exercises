@@ -65,4 +65,4 @@ Du betaler 86.40 Kr i MOMS
 </samp>
 7) Dokumenter programmet med et klassediagram - brug PlantUML
 
-![Klasse diagram](./Task2/klassediagram.svg)
+![Klasse diagram](./src/Task2/klassediagram.svg)
