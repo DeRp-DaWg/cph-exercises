@@ -1,0 +1,28 @@
+@startuml
+class Controller {
+- Dialog dialog
+- CalculateVAT calculateVAT
+- View view
++ runController()
+}
+
+class Dialog {
++ doDialog()
+}
+
+class CalculateVAT {
+- PRCVAT
++ doVat()
+}
+
+class View {
+- MSG
+- CURRENCY
++ doView()
+}
+
+Controller *-- Dialog
+Controller *-- CalculateVAT
+Controller *-- View
+
+@enduml
