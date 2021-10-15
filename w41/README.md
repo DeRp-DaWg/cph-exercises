@@ -40,7 +40,7 @@ Skriv et program om så det bliver objektorienteret. Dokumenter med et klassedia
    
    - doVat i en klasse der hedder 'CalculateVat'
    
-   - doView i en klasse der hdder 'View'
+   - doView i en klasse der hedder 'View'
    
    - runController i en klasse der hedder 'Controller'
 4) Sørg for passende "inventar" (fields, constructor og metoder)
